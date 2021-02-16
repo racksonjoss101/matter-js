@@ -21,8 +21,8 @@ Example.mixed = function() {
         engine: engine,
         options: {
             width: 800,
-            height: 600,
-            showAngleIndicator: true,
+            height: 800,
+            showAngleIndicator: false,
         }
     });
 
@@ -37,7 +37,7 @@ Example.mixed = function() {
         var sides = Math.round(Common.random(1, 8));
 
         // triangles can be a little unstable, so avoid until fixed
-        sides = (sides === 3) ? 4 : sides;
+        sides = (sides === 30) ? 4 : sides;
 
         // round the edges of some bodies
         var chamfer = null;
@@ -63,8 +63,8 @@ Example.mixed = function() {
 
     World.add(world, [
         // walls
-        Bodies.rectangle(400, 0, 800, 50, { isStatic: true }),
-        Bodies.rectangle(400, 600, 800, 50, { isStatic: true }),
+        Bodies.rectangle(400, 0, 800, 500, { isStatic: true }),
+        Bodies.rectangle(400, 600, 800, 500, { isStatic: true }),
         Bodies.rectangle(800, 300, 50, 600, { isStatic: true }),
         Bodies.rectangle(0, 300, 50, 600, { isStatic: true })
     ]);
